@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { MdAlternateEmail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
@@ -7,8 +7,21 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
+import emailjs from '@emailjs/browser';
 
 const Footer = () => {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   const scrollUp = () => {
     window.scroll({
       top: 0,
@@ -95,26 +108,26 @@ const Footer = () => {
       </Profile>
       <Form>
         <Slide direction="right">
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="name">
               <span>
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Fullname..." />
+              <input type="text" name="user_name" placeholder="Fullname..." />
             </div>
             <div className="email">
               <span>
                 <MdAlternateEmail />
               </span>
-              <input type="email" placeholder="Email..." />
+              <input type="email" name="user_email" placeholder="Email..." />
             </div>
             <div className="message">
               <span className="messageIcon">
                 <FiMail />
               </span>
-              <textarea cols="30" rows="10" placeholder="Message..."></textarea>
+              <textarea name="message" cols="30" rows="10" placeholder="Message..."></textarea>
             </div>
-            <button>Submit</button>
+            <button type="submit" value="Send" >Submit</button>
           </form>
         </Slide>
       </Form>
