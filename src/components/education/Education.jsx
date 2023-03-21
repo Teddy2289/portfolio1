@@ -8,11 +8,13 @@ import { Zoom } from 'react-awesome-reveal';
 
 function Education() {
   return (
-    <Container>
+    <Container id="education">
       <Zoom>
       <h1 className="title">
         My <span className="green">Education</span>
       </h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto doloremque 
+            voluptate excepturi porro sed totam quis animi dolorum rerum earum.</p>
       </Zoom>
       <Resume>
         <Slide direction="left">
@@ -66,9 +68,10 @@ const Container = styled.div`
   @media (max-width: 840px) {
     width: 90%;
   }
+
   h1 {
     text-align: center;
-    margin-bottom: 51px;
+    margin-bottom: 10px;
     font-size: 1.9rem;
     margin-top: 54px;
   }

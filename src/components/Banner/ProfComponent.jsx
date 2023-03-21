@@ -139,7 +139,7 @@ border-radius: 0px 0px 50% 50%;
 object-fit: cover;
 filter: drop-shadow(rgba(1, 190, 190, 0.435) 0px 10px 10px);
 transition: transform 400ms ease-in-out 0s;
-height: 49rem;
+height: 42rem;
     @media (max-width: 790px) {
       width: 20rem;
     }

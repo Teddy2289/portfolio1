@@ -14,28 +14,18 @@ function SideBar() {
               </a>
             </li>
             <li className="nav_item">
-              <a href="#about" className="nav_link">
-                <i className="icon-user-following"></i>
-              </a>
-            </li>
-            <li className="nav_item">
-              <a href="#services" className="nav_link">
+              <a href="#education" className="nav_link">
                 <i className="icon-briefcase"></i>
               </a>
             </li>
             <li className="nav_item">
-              <a href="#resume" className="nav_link">
+              <a href="#skils" className="nav_link">
                 <i className="icon-graduation"></i>
               </a>
             </li>
             <li className="nav_item">
               <a href="#portfolio" className="nav_link">
                 <i className="icon-layers"></i>
-              </a>
-            </li>
-            <li className="nav_item">
-              <a href="#blog" className="nav_link">
-                <i className="icon-note"></i>
               </a>
             </li>
             <li className="nav_item">

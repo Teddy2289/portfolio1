@@ -24,4 +24,11 @@ body{
 .green {
   color: #4DD0ED;
 }
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
 

@@ -7,7 +7,7 @@ import { BsFillBalloonHeartFill } from "react-icons/bs";
 function Header() {
   const [bar, setBar] = useState(false)
   return (
-    <Container bar={bar}>
+    <Container id="home" bar={bar}>
       <Logo>
         <span className="green">
           <BsFillBalloonHeartFill />
@@ -106,7 +106,7 @@ h1{
 
 
 const Nav = styled.div`
-
+display: none;
 @media(max-width:640px){
         position: fixed;
         display: flex;

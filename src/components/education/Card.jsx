@@ -57,4 +57,9 @@ const TimeLine = styled.div`
   .timeline_text {
     line-height: 1.5;
   }
+
+
+  @media(max-width:640px){
+      
+    }
 `;

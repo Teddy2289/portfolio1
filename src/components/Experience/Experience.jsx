@@ -8,7 +8,7 @@ import { Slide } from "react-awesome-reveal";
 import { Zoom } from 'react-awesome-reveal';
 function Experience() {
     return (
-        <Container>
+        <Container id="skils">
             <Zoom>
             <h1>
                 My <span className="green">Skils</span>

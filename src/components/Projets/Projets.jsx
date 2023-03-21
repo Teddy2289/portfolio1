@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Zoom } from 'react-awesome-reveal';
 function Projets() {
   return (
-    <Container id='project'>
+    <Container id='portfolio'>
     <Zoom>
       <h1>Recent<span className="green">Projects</span></h1>
     </Zoom>
