@@ -91,8 +91,6 @@ const Container = styled.div`
   }
 `;
 const Resume = styled.div`
-
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1.875rem;
