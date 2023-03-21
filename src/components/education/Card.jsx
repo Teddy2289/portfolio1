@@ -1,13 +1,12 @@
 import React from "react";
-import styled from 'styled-components'
-import {FaGraduationCap} from 'react-icons/fa'
-import {BsBriefcaseFill} from 'react-icons/bs'
-
+import styled from "styled-components";
+import { FaGraduationCap } from "react-icons/fa";
+import { BsBriefcaseFill } from "react-icons/bs";
 
 function Card(props) {
   return (
     <TimeLine>
-     <i className={props.icon}></i>
+      <i className={props.icon}></i>
       <span className="timeline_date">{props.year}</span>
       <h3 className="timeline_title">{props.title}</h3>
       <p className="timeline_text">{props.desc}</p>
@@ -18,34 +17,45 @@ function Card(props) {
 export default Card;
 
 const TimeLine = styled.div`
-    position: relative;
-    padding-left: 3.125rem;
-    padding-bottom: 3.125rem;
+  position: relative;
+  padding-left: 3.125rem;
+  padding-bottom: 3.125rem;
 
-    TimeLine:last-child{
-        padding-bottom: 0;
-    }
-    
-    TimeLine::before{
-        content: '';
-        width: 1px;
-        height: 100%;
-        background-color: var(--first-color);
-        position: absolute;
-        left: .25rem;
-        top: 0;
-    }
+  TimeLine:last-child {
+    padding-bottom: 0;
+  }
 
-    .timeline_date{
-        color: #8b88b1;
-        font-size: 14px;
-    }
-    
-    .timeline_title{
+  TimeLine::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0.25rem;
+    top: 0;
+  }
+
+  TimeLine .icon-graduation,
+  TimeLine .icon-briefcase {
+    position: absolute;
+    left: -0.4375rem;
+    top: 0;
+    font-size:2rem;
+    color:black;
+    padding: 0.4375rem 0;
+    background-color: white;
+  }
+
+  .timeline_date {
+    color: #8b88b1;
+    font-size: 14px;
+  }
+
+  .timeline_title {
     font-size: 20px;
-    }
-    
-    .timeline_text{
-        line-height: 1.5;
-    }
-`
+  }
+
+  .timeline_text {
+    line-height: 1.5;
+  }
+`;
