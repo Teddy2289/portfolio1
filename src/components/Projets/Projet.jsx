@@ -3,23 +3,23 @@ import styled from 'styled-components';
 
 const Project = (props) => {
     const { img, disc } = props.item;
-  return (
-    <Container className='project'>
-        <img src={img} alt="project" />
-        <div className="disc">
-            <h1>Description</h1>
-            <p>{disc}
-            <a href="/">demo</a>
-            </p>
-        </div>
-    </Container>
-  )
+    return (
+        <Container className='project'>
+            <img src={img} alt="project" />
+            <div className="disc">
+                <h1>Description</h1>
+                <p>{disc}
+                    <a href="/">demo</a>
+                </p>
+            </div>
+        </Container>
+    )
 }
 
 export default Project;
 
 const Container = styled.div`
-    height: 10rem;
+    height: 26rem;
     background-color: #4e5156;
     margin: 0 0.5rem;
     padding: 0.5rem;
@@ -33,6 +33,7 @@ const Container = styled.div`
         object-fit: cover;
         transition: transform 400ms ease-in-out;
     }
+
     .disc{
         position: absolute;
         right: 0;
@@ -50,8 +51,14 @@ const Container = styled.div`
             width: 90%;
             font-size: 0.8rem;
             a{
-                margin-left: 0.4rem;
-                color: red;
+                margin-left: 15.4rem;
+                padding: 0.7rem 2rem;
+                margin-top: 3rem;
+                cursor: pointer;
+                background-color: rgb(201, 85, 158);
+                border: medium none;
+                color: rgb(255, 255, 255);
+                font-weight: 500;
             }
         }
     }

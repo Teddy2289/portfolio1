@@ -59,12 +59,13 @@ function Education() {
 export default Education;
 
 const Container = styled.div`
-
-  padding-left: 15px;
-  padding-right: 15px;
-  margin:0 auto;
   width: 80%;
-  max-width: 981px;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 840px) {
     width: 90%;
   }

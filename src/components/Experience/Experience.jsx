@@ -9,6 +9,7 @@ import { Zoom } from 'react-awesome-reveal';
 function Experience() {
     return (
         <Container id="skils">
+            <div className="wrapper-kils" >
             <Zoom>
             <h1>
                 My <span className="green">Skils</span>
@@ -75,6 +76,7 @@ function Experience() {
                 </Div>
             </Slide>
 
+            </div>
         </Container>
     )
 }
@@ -125,6 +127,10 @@ const Container = styled.div`
   max-width: 820px;
   margin: 0 auto;
   padding: 3rem 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 840px) {
     width: 90%;
   }
