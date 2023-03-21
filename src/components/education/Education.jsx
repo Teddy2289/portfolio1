@@ -14,7 +14,7 @@ function Education() {
         My <span className="green">Education</span>
       </h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto doloremque 
-            voluptate excepturi porro sed totam quis animi dolorum rerum earum.</p>
+        voluptate excepturi porro sed totam quis animi dolorum rerum earum.</p>
       </Zoom>
       <Resume>
         <Slide direction="left">
@@ -60,7 +60,7 @@ export default Education;
 
 const Container = styled.div`
   width: 80%;
-  max-width: 820px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 3rem 0;
   height: 100vh;
@@ -69,13 +69,20 @@ const Container = styled.div`
   @media (max-width: 840px) {
     width: 90%;
   }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.9rem;
-    margin-top: 54px;
-  }
+    h1{
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 1.9rem;
+    }
+    p{
+        width: 28rem;
+        margin: 0 auto;
+        padding: 1rem 0;
+        font-size: 0.9rem;
+        @media(max-width : 500px){
+            width: 90%;
+        }
+    }
   .title {
     position: relative;
   }
@@ -90,15 +97,6 @@ const Container = styled.div`
     bottom: -11px;
     width: 119px;
   }
-  p {
-    width: 28rem;
-    margin: 0 auto;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    @media (max-width: 500px) {
-      width: 90%;
-    }
-  }
 `;  
 const Resume = styled.div`
   display: grid;
@@ -111,4 +109,5 @@ const Timline = styled.div`
     padding: 1.875rem;
     border-radius: 15px;
     position: relative;
+  
 `
