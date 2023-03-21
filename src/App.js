@@ -7,10 +7,12 @@ import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
 import Projets from "./components/Projets/Projets";
 import Service from "./components/Service/Service";
+import SideBar from "./components/Sidebar/SideBar";
 
 function App() {
   return (
     <Container>
+      <SideBar/>
       <Banner>
         <Header />
         <ProfComponent/>
