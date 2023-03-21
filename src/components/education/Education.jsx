@@ -60,7 +60,7 @@ export default Education;
 
 const Container = styled.div`
   width: 80%;
-  max-width: 1040px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 3rem 0;
   height: 100vh;
