@@ -19,13 +19,10 @@ function Header() {
           <Link to="#">Home</Link>
         </span>
         <span>
-          <Link to="#">Services</Link>
+          <Link to="#">My Education</Link>
         </span>
         <span>
-          <Link to="#">Projets</Link>
-        </span>
-        <span>
-          <Link to="#">Testimonials</Link>
+          <Link to="#">Skills</Link>
         </span>
         <span>
           <Link to="#">Portfolio</Link>
