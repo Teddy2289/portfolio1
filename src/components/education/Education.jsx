@@ -8,7 +8,8 @@ function Education() {
     <Container>
       <h1 className="title">
         My <span className="green">Education</span>
-        <Resume className="resume_container grid">
+      </h1>
+      <Resume className="resume_container grid">
           <div className="timline grid">
             {Data.map((val, id) => {
               if (val.category === "education") {
@@ -41,7 +42,6 @@ function Education() {
             })}
           </div>
         </Resume>
-      </h1>
     </Container>
   );
 }
