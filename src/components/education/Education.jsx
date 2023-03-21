@@ -2,14 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
 import Data from "./Data";
+import {FaGraduationCap} from 'react-icons/fa'
+import {BsBriefcaseFill} from 'react-icons/bs'
+
 
 function Education() {
   return (
     <Container>
       <h1 className="title">
         My <span className="green">Education</span>
-        <Resume className="resume_container grid">
-          <div className="timline grid">
+      </h1>
+      <Resume>
+          <Timline >
             {Data.map((val, id) => {
               if (val.category === "education") {
                 return (
@@ -23,9 +27,9 @@ function Education() {
                 );
               }
             })}
-          </div>
+          </Timline>
 
-          <div className="timline grid">
+          <Timline>
             {Data.map((val, index) => {
               if (val.category === "experience") {
                 return (
@@ -39,9 +43,8 @@ function Education() {
                 );
               }
             })}
-          </div>
+          </Timline>
         </Resume>
-      </h1>
     </Container>
   );
 }
@@ -49,9 +52,10 @@ function Education() {
 export default Education;
 
 const Container = styled.div`
-padding-left: 15px;
-padding-right: 15px;
-margin:0 auto;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  margin:0 auto;
   width: 80%;
   max-width: 820px;
   @media (max-width: 840px) {
@@ -88,48 +92,15 @@ margin:0 auto;
 `;
 const Resume = styled.div`
 
-.grid{
+
   display: grid;
-}
-  .resume_container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.875rem;
-  }
-
-  .timline {
-    background-color: var(--container-color);
-    padding: 1.875rem;
-    border-radius: var(--border-radius);
-    position: relative;
-    box-shadow: var(--shadow);
-  }
-  .timeline_item {
-    position: relative;
-    padding-left: 3.125rem;
-    padding-bottom: 3.125rem;
-  }
-  .timeline_item:last-child {
-    padding-bottom: 0;
-  }
-
-  .timeline_item::before {
-    content: "";
-    width: 1px;
-    height: 100%;
-    background-color: var(--first-color);
-    position: absolute;
-    left: 0.25rem;
-    top: 0;
-  }
-
-  .timline .icon-graduation,
-  .timline .icon-briefcase {
-    position: absolute;
-    left: -0.4375rem;
-    top: 0;
-    font-size: var(--h2--font-size);
-    color: var(--first-color);
-    padding: 0.4375rem 0;
-    background-color: var(--container-color);
-  }
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.875rem;
 `;
+
+const Timline = styled.div`
+   background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+    padding: 1.875rem;
+    border-radius: 15px;
+    position: relative;
+`
