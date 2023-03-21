@@ -2,17 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
 import Data from "./Data";
-import {FaGraduationCap} from 'react-icons/fa'
-import {BsBriefcaseFill} from 'react-icons/bs'
+import { Slide } from "react-awesome-reveal";
+import { Zoom } from 'react-awesome-reveal';
 
 
 function Education() {
   return (
     <Container>
+      <Zoom>
       <h1 className="title">
         My <span className="green">Education</span>
       </h1>
+      </Zoom>
       <Resume>
+        <Slide direction="left">
           <Timline >
             {Data.map((val, id) => {
               if (val.category === "education") {
@@ -28,7 +31,8 @@ function Education() {
               }
             })}
           </Timline>
-
+          </Slide>
+          <Slide direction="right">
           <Timline>
             {Data.map((val, index) => {
               if (val.category === "experience") {
@@ -44,6 +48,7 @@ function Education() {
               }
             })}
           </Timline>
+          </Slide>
         </Resume>
     </Container>
   );
@@ -57,14 +62,15 @@ const Container = styled.div`
   padding-right: 15px;
   margin:0 auto;
   width: 80%;
-  max-width: 820px;
+  max-width: 981px;
   @media (max-width: 840px) {
     width: 90%;
   }
   h1 {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 51px;
     font-size: 1.9rem;
+    margin-top: 54px;
   }
   .title {
     position: relative;
@@ -72,13 +78,13 @@ const Container = styled.div`
   .title::after {
     content: "";
     display: block;
-    height: 7px;
+    height: 2px;
     background-color: white;
     position: absolute;
-    left: 41%;
+    left: 44%;
     transform: translateX(0%);
     bottom: -11px;
-    width: 153px;
+    width: 119px;
   }
   p {
     width: 28rem;
@@ -89,7 +95,7 @@ const Container = styled.div`
       width: 90%;
     }
   }
-`;
+`;  
 const Resume = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -97,7 +103,7 @@ const Resume = styled.div`
 `;
 
 const Timline = styled.div`
-   background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+    background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
     padding: 1.875rem;
     border-radius: 15px;
     position: relative;

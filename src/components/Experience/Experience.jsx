@@ -4,60 +4,76 @@ import laravel from './../../assets/laravel.png'
 import reactjs from './../../assets/reactjs.png'
 import vuejs from './../../assets/vuejs.png'
 import php from './../../assets/php.png'
+import { Slide } from "react-awesome-reveal";
+import { Zoom } from 'react-awesome-reveal';
 function Experience() {
     return (
         <Container>
+            <Zoom>
             <h1>
                 My <span className="green">Skils</span>
             </h1>
-            <Div>
-                <Column>
-                    <Image src={laravel} alt="example image" />
-                    <Title>laravel</Title>
-                </Column>
-                <Column>
-                    <ProgressBar>
-                        <Progress percent={70} />
-                    </ProgressBar>
-                    <span>70%</span>
-                </Column>
-            </Div>
-            <Div>
-                <Column>
-                    <Image src={php} alt="example image" />
-                    <Title>PHP</Title>
-                </Column>
-                <Column>
-                    <ProgressBar>
-                        <Progress percent={80} />
-                    </ProgressBar>
-                    <span>80%</span>
-                </Column>
-            </Div>
-            <Div>
-                <Column>
-                    <Image src={reactjs} alt="example image" />
-                    <Title>Reactjs</Title>
-                </Column>
-                <Column>
-                    <ProgressBar>
-                        <Progress percent={50} />
-                    </ProgressBar>
-                    <span>50%</span>
-                </Column>
-            </Div>
-            <Div>
-                <Column>
-                    <Image src={vuejs} alt="example image" />
-                    <Title>Vuejs</Title>
-                </Column>
-                <Column>
-                    <ProgressBar>
-                        <Progress percent={40} />
-                    </ProgressBar>
-                    <span>40%</span>
-                </Column>
-            </Div>
+            </Zoom>
+            <Slide direction="left">
+                <Div>
+                    <Column>
+                        <Image src={laravel} alt="example image" />
+                        <Title>laravel</Title>
+                    </Column>
+                    <Column>
+                        <ProgressBar>
+                            <Progress percent={70} />
+                        </ProgressBar>
+                        <span>70%</span>
+                    </Column>
+                </Div>
+            </Slide>
+            <Slide direction='right'>
+
+            </Slide>
+            <Slide direction='left'>
+                <Div>
+                    <Column>
+                        <Image src={php} alt="example image" />
+                        <Title>PHP</Title>
+                    </Column>
+                    <Column>
+                        <ProgressBar>
+                            <Progress percent={80} />
+                        </ProgressBar>
+                        <span>80%</span>
+                    </Column>
+                </Div>
+            </Slide>
+
+            <Slide direction='right'>
+                <Div>
+                    <Column>
+                        <Image src={reactjs} alt="example image" />
+                        <Title>Reactjs</Title>
+                    </Column>
+                    <Column>
+                        <ProgressBar>
+                            <Progress percent={50} />
+                        </ProgressBar>
+                        <span>50%</span>
+                    </Column>
+                </Div>
+            </Slide>
+            <Slide direction='left'>
+                <Div>
+                    <Column>
+                        <Image src={vuejs} alt="example image" />
+                        <Title>Vuejs</Title>
+                    </Column>
+                    <Column>
+                        <ProgressBar>
+                            <Progress percent={40} />
+                        </ProgressBar>
+                        <span>40%</span>
+                    </Column>
+                </Div>
+            </Slide>
 
         </Container>
     )
