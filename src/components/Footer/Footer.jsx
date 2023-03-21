@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { MdAlternateEmail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
@@ -7,17 +8,22 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
-import emailjs from '@emailjs/browser';
 
 const Footer = () => {
-  const form = useRef()
+  const form = useRef();
+  const messages = useRef();
+  const [user_name, setName] = useState("");
+  const [user_email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_ss2jl4t', 'template_iot4y5h', form.current, 'PW-9HBp59tGv8WiMu')
+    emailjs.sendForm('service_we2unol', 'template_iot4y5h', form.current, 'PW-9HBp59tGv8WiMu')
       .then((result) => {
-        console.log(result.text);
+        setName("");
+        setEmail("");
+        setMessage("");
       }, (error) => {
         console.log(error.text);
       });
@@ -106,30 +112,30 @@ const Footer = () => {
           </ArrowUp>
         </Fade>
       </Profile>
+
+    
       <Form>
-        <Slide direction="right">
-          <form ref={form} onSubmit={sendEmail}>
+        <form  onSubmit={sendEmail} ref={ form } > 
             <div className="name">
               <span>
                 <CgProfile />
               </span>
-              <input type="text" name="user_name" placeholder="Fullname..." />
+              <input type="text" value={user_name} onChange={(e) => setName(e.target.value)} name="user_name" placeholder="Fullname..." />
             </div>
             <div className="email">
               <span>
                 <MdAlternateEmail />
               </span>
-              <input type="email" name="user_email" placeholder="Email..." />
+              <input type="email" value={user_email}  onChange={(e) => setEmail(e.target.value)} name="user_email" placeholder="Email..." />
             </div>
             <div className="message">
               <span className="messageIcon">
                 <FiMail />
               </span>
-              <textarea name="message" cols="30" rows="10" placeholder="Message..."></textarea>
+              <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} setMessage={setMessage} cols="30" rows="10" placeholder="Message..."></textarea>
             </div>
-            <button type="submit" value="Send" >Submit</button>
+            <button type="submit" >Submit</button>
           </form>
-        </Slide>
       </Form>
     </Container>
   );

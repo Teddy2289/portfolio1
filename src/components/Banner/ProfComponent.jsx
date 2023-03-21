@@ -1,49 +1,64 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import { AiOutlineInstagram } from 'react-icons/ai'
-import { AiFillLinkedin } from 'react-icons/ai'
-import { AiFillFacebook } from 'react-icons/ai'
-import profif from './../../assets/profil.png'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillFacebook } from "react-icons/ai";
+import profif from "./../../assets/profil.png";
 import { Slide } from "react-awesome-reveal";
 
 function ProfComponent() {
   return (
     <Container>
       <Text>
-        <h4>Hello <span className='green'> I'm</span></h4>
+        <h4>
+          Hello <span className="green"> I'm</span>
+        </h4>
         <Slide>
           <h1>Teddy Rinah</h1>
         </Slide>
         <Slide>
           <h3>Developper</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vitae porro sequi tempore natus vero, rem nostrum molestiae laboriosam numquam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vitae porro sequi tempore natus vero, rem nostrum molestiae laboriosam numquam.
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            vitae porro sequi tempore natus vero, rem nostrum molestiae
+            laboriosam numquam. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Soluta vitae porro sequi tempore natus vero, rem
+            nostrum molestiae laboriosam numquam.
           </p>
         </Slide>
         <button>Let's talk</button>
         <Social>
-          <p>
-            Check out my
-          </p>
+          <p>Check out my</p>
           <div className="social-icon">
-            <span><Link to="#"><AiOutlineInstagram /></Link></span>
-            <span><Link to="#"><AiFillLinkedin /></Link></span>
-            <span><Link to="#"><AiFillFacebook /></Link></span>
+            <span>
+              <Link to="#">
+                <AiOutlineInstagram />
+              </Link>
+            </span>
+            <span>
+              <Link to="#">
+                <AiFillLinkedin />
+              </Link>
+            </span>
+            <span>
+              <Link to="#">
+                <AiFillFacebook />
+              </Link>
+            </span>
           </div>
         </Social>
       </Text>
       <Profil>
-        <Slide direction='right'>
+        <Slide direction="right">
           <img src={profif} alt="profil" />
         </Slide>
-
       </Profil>
     </Container>
-  )
+  );
 }
 
-export default ProfComponent
+export default ProfComponent;
 const Container = styled.div`
   display: flex;
   gap: 2rem;
@@ -66,10 +81,10 @@ const Text = styled.div`
     padding: 1rem 0;
     font-weight: 500;
   }
-  
+
   h1 {
     font-size: 4rem;
-    color: #4DD0ED;
+    color: #4dd0ed;
     font-family: "Secular One", sans-serif;
     letter-spacing: 2px;
   }
@@ -86,7 +101,7 @@ const Text = styled.div`
     padding: 0.7rem 2rem;
     margin-top: 3rem;
     cursor: pointer;
-    background-color: #4DD0ED;
+    background-color: #4dd0ed;
     border: none;
     color: #fff;
     font-weight: 500;
@@ -115,7 +130,7 @@ const Social = styled.div`
       width: 2.3rem;
       height: 2rem;
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      background-color: #4DD0ED;
+      background-color: #4dd0ed;
       position: relative;
       transition: transform 400ms ease-in-out;
       :hover {
@@ -133,13 +148,13 @@ const Social = styled.div`
 `;
 
 const Profil = styled.div`
-img {
-  width: 41rem;
-border-radius: 0px 0px 50% 50%;
-object-fit: cover;
-filter: drop-shadow(rgba(1, 190, 190, 0.435) 0px 10px 10px);
-transition: transform 400ms ease-in-out 0s;
-height: 42rem;
+  img {
+    width: 41rem;
+    border-radius: 0px 0px 50% 50%;
+    object-fit: cover;
+    filter: drop-shadow(rgba(1, 190, 190, 0.435) 0px 10px 10px);
+    transition: transform 400ms ease-in-out 0s;
+    height: 37rem;
     @media (max-width: 790px) {
       width: 20rem;
     }
