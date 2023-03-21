@@ -1,11 +1,13 @@
 import React from "react";
 import styled from 'styled-components'
+import {FaGraduationCap} from 'react-icons/fa'
+import {BsBriefcaseFill} from 'react-icons/bs'
 
 
 function Card(props) {
   return (
     <TimeLine>
-      <i className={props.icon}></i>
+      {props.icon}
       <span className="timeline_date">{props.year}</span>
       <h3 className="timeline_title">{props.title}</h3>
       <p className="timeline_text">{props.desc}</p>
