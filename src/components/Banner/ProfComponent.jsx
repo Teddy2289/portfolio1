@@ -37,12 +37,12 @@ function ProfComponent() {
               </Link>
             </span>
             <span>
-              <Link to="#">
+              <Link to="https://www.linkedin.com/in/teddy-rinah-ralaivao-nomenjanahary-00b3081ba/" target="_blank" >
                 <AiFillLinkedin />
               </Link>
             </span>
             <span>
-              <Link to="#">
+              <Link to="https://web.facebook.com/teddyrinner.ralaivao/" target="_blank">
                 <AiFillFacebook />
               </Link>
             </span>
