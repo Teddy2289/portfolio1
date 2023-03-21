@@ -5,39 +5,42 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { AiFillFacebook } from 'react-icons/ai'
 import profif from './../../assets/profil.png'
-import { Slide} from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 
 function ProfComponent() {
-    return (
-        <Container>
-            <Text>
-                <h4>Hello <span className='green'> I'm</span></h4>
-                <Slide>
-                <h1>Teddy Rinah</h1>
-                </Slide>
-                <Slide>
-                <h3>Developper</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vitae porro sequi tempore natus vero, rem nostrum molestiae laboriosam numquam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vitae porro sequi tempore natus vero, rem nostrum molestiae laboriosam numquam.
-                </p>
-                </Slide>
-                <button>Let's talk</button>
-                <Social>
-                    <p>
-                        Check out my
-                    </p>
-                    <div className="social-icon">
-                        <span><Link to="#"><AiOutlineInstagram /></Link></span>
-                        <span><Link to="#"><AiFillLinkedin /></Link></span>
-                        <span><Link to="#"><AiFillFacebook /></Link></span>
-                    </div>
-                </Social>
-            </Text>
-            <Profil>
-                <img src={profif} alt="profil" />
-            </Profil>
-        </Container>
-    )
+  return (
+    <Container>
+      <Text>
+        <h4>Hello <span className='green'> I'm</span></h4>
+        <Slide>
+          <h1>Teddy Rinah</h1>
+        </Slide>
+        <Slide>
+          <h3>Developper</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vitae porro sequi tempore natus vero, rem nostrum molestiae laboriosam numquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vitae porro sequi tempore natus vero, rem nostrum molestiae laboriosam numquam.
+          </p>
+        </Slide>
+        <button>Let's talk</button>
+        <Social>
+          <p>
+            Check out my
+          </p>
+          <div className="social-icon">
+            <span><Link to="#"><AiOutlineInstagram /></Link></span>
+            <span><Link to="#"><AiFillLinkedin /></Link></span>
+            <span><Link to="#"><AiFillFacebook /></Link></span>
+          </div>
+        </Social>
+      </Text>
+      <Profil>
+        <Slide direction='right'>
+          <img src={profif} alt="profil" />
+        </Slide>
+
+      </Profil>
+    </Container>
+  )
 }
 
 export default ProfComponent
@@ -131,11 +134,12 @@ const Social = styled.div`
 
 const Profil = styled.div`
 img {
-    width: 30rem;
-    border-radius: 0 0 50% 50%;
-    object-fit: cover;
-    filter: drop-shadow(0px 10px 10px #01bebe6f);
-    transition: transform 400ms ease-in-out;
+  width: 41rem;
+border-radius: 0px 0px 50% 50%;
+object-fit: cover;
+filter: drop-shadow(rgba(1, 190, 190, 0.435) 0px 10px 10px);
+transition: transform 400ms ease-in-out 0s;
+height: 49rem;
     @media (max-width: 790px) {
       width: 20rem;
     }

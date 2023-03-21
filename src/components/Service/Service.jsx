@@ -5,16 +5,17 @@ import { CgWebsite } from "react-icons/cg";
 import styled from 'styled-components';
 import Card from './Card';
 import { Slide } from "react-awesome-reveal";
+import { Zoom } from 'react-awesome-reveal';
 
 function Service() {
   return (
     <Container>
-      <Slide direction="down">
+      <Zoom>
         <h1>
           My <span className="green">services</span>
         </h1>
         <h1>What I Do</h1>
-      </Slide>
+      </Zoom>
       <Cards>
         <Slide direction="left">
           <Card

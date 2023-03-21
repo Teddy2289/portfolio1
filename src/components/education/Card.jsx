@@ -27,7 +27,7 @@ const TimeLine = styled.div`
 
   TimeLine::before {
     content: "";
-    width: 5px;
+    width: 1px;
     height: 100%;
     background-color: white;
     position: absolute;
@@ -35,15 +35,14 @@ const TimeLine = styled.div`
     top: 0;
   }
 
-  TimeLine .icon-graduation,
-  TimeLine .icon-briefcase {
+  .icon-graduation,
+  .icon-briefcase {
     position: absolute;
     left: -0.4375rem;
     top: 0;
     font-size:2rem;
-    color:black;
+    color:white;
     padding: 0.4375rem 0;
-    background-color: white;
   }
 
   .timeline_date {
