@@ -14,6 +14,8 @@ function Experience() {
             <h1>
                 My <span className="green">Skils</span>
             </h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto doloremque 
+        voluptate excepturi porro sed totam quis animi dolorum rerum earum.</p>
             </Zoom>
             <Slide direction="left">
                 <Div>
@@ -23,7 +25,7 @@ function Experience() {
                     </Column>
                     <Column>
                         <ProgressBar>
-                            <Progress percent={70} />
+                            <Progress percent={70} color={"#fa523d"}  />
                         </ProgressBar>
                         <span>70%</span>
                     </Column>
@@ -40,7 +42,7 @@ function Experience() {
                     </Column>
                     <Column>
                         <ProgressBar>
-                            <Progress percent={80} />
+                            <Progress percent={80} color={"#3765af"} />
                         </ProgressBar>
                         <span>80%</span>
                     </Column>
@@ -55,9 +57,9 @@ function Experience() {
                     </Column>
                     <Column>
                         <ProgressBar>
-                            <Progress percent={50} />
+                            <Progress percent={60} color={"#4DD0ED"} />
                         </ProgressBar>
-                        <span>50%</span>
+                        <span>60%</span>
                     </Column>
                 </Div>
             </Slide>
@@ -69,7 +71,7 @@ function Experience() {
                     </Column>
                     <Column>
                         <ProgressBar>
-                            <Progress percent={40} />
+                            <Progress percent={40} color={"#40b782"} />
                         </ProgressBar>
                         <span>40%</span>
                     </Column>
@@ -112,7 +114,7 @@ const ProgressBar = styled.div`
 
 const Progress = styled.div`
   height: 100%;
-  background-color: #4DD0ED;
+  background-color:${(props) => props.color};
   border-radius: 10px;
   width: ${(props) => props.percent}%;
 `;
