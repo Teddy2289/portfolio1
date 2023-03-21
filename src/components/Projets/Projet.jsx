@@ -19,7 +19,7 @@ const Project = (props) => {
 export default Project;
 
 const Container = styled.div`
-    height: 26rem;
+    height: 17rem;
     background-color: #4e5156;
     margin: 0 0.5rem;
     padding: 0.5rem;
@@ -51,9 +51,9 @@ const Container = styled.div`
             width: 90%;
             font-size: 0.8rem;
             a{
-                margin-left: 15.4rem;
-                padding: 0.7rem 2rem;
-                margin-top: 3rem;
+                margin-left: 7.4rem;
+                padding: 0.7rem 1rem;
+                margin-top: 26px;
                 cursor: pointer;
                 background-color: rgb(201, 85, 158);
                 border: medium none;

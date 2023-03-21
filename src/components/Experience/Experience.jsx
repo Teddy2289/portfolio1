@@ -31,9 +31,7 @@ function Experience() {
                     </Column>
                 </Div>
             </Slide>
-            <Slide direction='right'>
-
-            </Slide>
+        
             <Slide direction='left'>
                 <Div>
                     <Column>
@@ -89,16 +87,25 @@ const Div = styled.div`
    margin-right: 20px;
   display: flex;
   align-items: center;
+  @media (max-width: 840px) {
+    width: 70%;
+  }
 `;
 const Column = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 70px;
+  @media (max-width: 840px) {
+    width: 40%;
+  }
 `;
 
 const Image = styled.img`
   max-width: 50%;
+  @media (max-width: 840px) {
+    width: 40%;
+  }
 `;
 
 const Title = styled.h1`

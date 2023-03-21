@@ -8,6 +8,7 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
+import { ReactComponent as Loader } from "./../../assets/Loading.svg";
 
 const Footer = () => {
   const form = useRef();
@@ -15,18 +16,30 @@ const Footer = () => {
   const [user_name, setName] = useState("");
   const [user_email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, SetLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_we2unol', 'template_iot4y5h', form.current, 'PW-9HBp59tGv8WiMu')
-      .then((result) => {
-        setName("");
-        setEmail("");
-        setMessage("");
-      }, (error) => {
-        console.log(error.text);
-      });
+    SetLoading(true);
+    emailjs
+      .sendForm(
+        "service_we2unol",
+        "template_iot4y5h",
+        form.current,
+        "PW-9HBp59tGv8WiMu"
+      )
+      .then(
+        (result) => {
+          setName("");
+          setEmail("");
+          setMessage("");
+          SetLoading(false);
+        },
+        (error) => {
+          console.log(error.text);
+          SetLoading(false);
+        }
+      );
   };
   const scrollUp = () => {
     window.scroll({
@@ -38,7 +51,9 @@ const Footer = () => {
     <Container id="contact">
       <Profile>
         <Slide direction="left" delay={1}>
-          <h1>Conatct <span className="green">Me</span></h1>
+          <h1>
+            Conatct <span className="green">Me</span>
+          </h1>
         </Slide>
         <div className="address">
           <Slide direction="left">
@@ -112,30 +127,54 @@ const Footer = () => {
           </ArrowUp>
         </Fade>
       </Profile>
-
-    
       <Form>
-        <form  onSubmit={sendEmail} ref={ form } > 
-            <div className="name">
-              <span>
-                <CgProfile />
-              </span>
-              <input type="text" value={user_name} onChange={(e) => setName(e.target.value)} name="user_name" placeholder="Fullname..." />
-            </div>
-            <div className="email">
-              <span>
-                <MdAlternateEmail />
-              </span>
-              <input type="email" value={user_email}  onChange={(e) => setEmail(e.target.value)} name="user_email" placeholder="Email..." />
-            </div>
-            <div className="message">
-              <span className="messageIcon">
-                <FiMail />
-              </span>
-              <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} setMessage={setMessage} cols="30" rows="10" placeholder="Message..."></textarea>
-            </div>
-            <button type="submit" >Submit</button>
-          </form>
+        <form onSubmit={sendEmail} ref={form}>
+          <div className="name">
+            <span>
+              <CgProfile />
+            </span>
+            <input
+              type="text"
+              required
+              value={user_name}
+              onChange={(e) => setName(e.target.value)}
+              name="user_name"
+              placeholder="Fullname..."
+            />
+          </div>
+          <div className="email">
+            <span>
+              <MdAlternateEmail />
+            </span>
+            <input
+              type="email"
+              required
+              value={user_email}
+              onChange={(e) => setEmail(e.target.value)}
+              name="user_email"
+              placeholder="Email..."
+            />
+          </div>
+          <div className="message">
+            <span className="messageIcon">
+              <FiMail />
+            </span>
+            <textarea
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              setMessage={setMessage}
+              cols="30"
+              rows="10"
+              required
+              placeholder="Message..."
+            ></textarea>
+          </div>
+          <Btn>
+            <button type="submit">Send Message</button>
+            {loading && <Loader height={30} width={30} />}
+          </Btn>
+        </form>
       </Form>
     </Container>
   );
@@ -224,7 +263,7 @@ const Profile = styled.div`
 const ArrowUp = styled.div`
   width: 2rem;
   height: 2rem;
-  background-color: #4DD0ED;
+  background-color: #4dd0ed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,9 +315,12 @@ const Form = styled.div`
       }
     }
     button {
-      width: 5rem;
-      height: 1.8rem;
-      background-color: #4DD0ED;
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      height: 30px;
+      padding:5px;
+      background-color: #4dd0ed;
       border: none;
       border-radius: 5px;
       filter: drop-shadow(0px 4px 5px #01be9551);
@@ -287,5 +329,15 @@ const Form = styled.div`
         filter: drop-shadow(0px 6px 9px #01be9551);
       }
     }
+  }
+`;
+
+const Btn = styled.div`
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+
+  @media (max-width: 60em) {
+    width: 100%;
   }
 `;

@@ -102,6 +102,10 @@ const Resume = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1.875rem;
+  @media (max-width: 840px) {
+    width: 83%;
+    display:block;
+  }
 `;
 
 const Timline = styled.div`
@@ -109,5 +113,10 @@ const Timline = styled.div`
     padding: 1.875rem;
     border-radius: 15px;
     position: relative;
+    @media (max-width: 840px) {
+      width: 121%;
+    margin: 14px auto;
+    height: 50vh;
+    }
   
 `

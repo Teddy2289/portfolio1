@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 import { MdDesignServices } from "react-icons/md";
 import { FiCodesandbox } from "react-icons/fi";
 import { CgWebsite } from "react-icons/cg";
-import styled from 'styled-components';
-import Card from './Card';
+import styled from "styled-components";
+import Card from "./Card";
 import { Slide } from "react-awesome-reveal";
-import { Zoom } from 'react-awesome-reveal';
+import { Zoom } from "react-awesome-reveal";
 
 function Service() {
   return (
-    <Container>
+    <Container id="service">
       <Zoom>
-        <h1>
+        <h1 className="title">
           My <span className="green">services</span>
         </h1>
         <h1>What I Do</h1>
@@ -43,10 +43,10 @@ function Service() {
         </Slide>
       </Cards>
     </Container>
-  )
+  );
 }
 
-export default Service
+export default Service;
 const Container = styled.div`
   width: 80%;
   max-width: 1280px;
@@ -54,11 +54,30 @@ const Container = styled.div`
   padding: 3rem 0;
   @media (max-width: 840px) {
     width: 90%;
+    margin-top: 192px;
+    padding: 1rem;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 1rem;
+    @media (max-width: 840px) {
+      text-align: center;
+      margin-bottom: -4px;
+      padding-top: 4rem;
+    }
   }
   h1 {
     text-align: center;
     margin-bottom: 15px;
     padding-top: 1rem;
+    @media (max-width: 840px) {
+      text-align: center;
+      margin-bottom: 0px;
+      padding-top: 1rem;
+      margin-top: -16px;
+    }
   }
 `;
 const Cards = styled.div`

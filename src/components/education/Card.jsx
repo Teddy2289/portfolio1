@@ -20,7 +20,13 @@ const TimeLine = styled.div`
   position: relative;
   padding-left: 3.125rem;
   padding-bottom: 3.125rem;
-
+  @media (max-width: 840px) {
+    width: 90%;
+    position: relative;
+    padding-left: 3.125rem;
+    padding-bottom: 0.125rem;
+}
+  }
   TimeLine:last-child {
     padding-bottom: 0;
   }
@@ -59,7 +65,5 @@ const TimeLine = styled.div`
   }
 
 
-  @media(max-width:640px){
-      
-    }
+
 `;
