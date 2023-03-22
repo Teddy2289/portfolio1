@@ -16,8 +16,8 @@ export default Card;
 
 const TimeLine = styled.div`
   position: relative;
-padding-left: 1.125rem;
-padding-bottom: 0.125rem;
+  padding-left: 3.125rem;
+  padding-bottom: 3.125rem;
   @media (max-width: 840px) {
     width: 90%;
     position: relative;

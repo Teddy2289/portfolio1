@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "./components/Banner/Header";
 import ProfComponent from "./components/Banner/ProfComponent";
 import Education from "./components/education/Education";
+import Expe from "./components/Expe/Expe";
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
 import Projets from "./components/Projets/Projets";
@@ -12,18 +13,19 @@ import SideBar from "./components/Sidebar/SideBar";
 function App() {
   return (
     <Container>
-      <SideBar/>
+      <SideBar />
       <Banner>
         <Header />
-        <ProfComponent/>
+        <ProfComponent />
       </Banner>
-      <Education/>
-      <Service/>
-      <Experience/>
-      <Projets/>
-     <BannerFooter>
-     <Footer/>
-     </BannerFooter>
+      <Education />
+      <Service />
+      <Experience />
+      <Expe/>
+      <Projets />
+      <BannerFooter>
+        <Footer />
+      </BannerFooter>
     </Container>
   );
 }
@@ -40,7 +42,7 @@ const Banner = styled.div`
 `;
 
 const BannerFooter = styled.div`
- background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+  background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
   height: 50vh;
   @media (max-width: 640px) {
     height: 100%;

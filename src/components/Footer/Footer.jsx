@@ -12,7 +12,6 @@ import { ReactComponent as Loader } from "./../../assets/Loading.svg";
 
 const Footer = () => {
   const form = useRef();
-  const messages = useRef();
   const [user_name, setName] = useState("");
   const [user_email, setEmail] = useState("");
   const [message, setMessage] = useState("");
