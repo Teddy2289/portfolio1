@@ -10,11 +10,11 @@ function Education() {
   return (
     <Container id="education">
       <Zoom>
-      <h1 className="title">
-        My <span className="green">Education</span>
-      </h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto doloremque 
-        voluptate excepturi porro sed totam quis animi dolorum rerum earum.</p>
+        <h1 className="title">
+          My <span className="green">Education</span>
+        </h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto doloremque
+          voluptate excepturi porro sed totam quis animi dolorum rerum earum.</p>
       </Zoom>
       <Resume>
         <Slide direction="left">
@@ -33,8 +33,8 @@ function Education() {
               }
             })}
           </Timline>
-          </Slide>
-          <Slide direction="right">
+        </Slide>
+        <Slide direction="right">
           <Timline>
             {Data.map((val, index) => {
               if (val.category === "experience") {
@@ -50,8 +50,8 @@ function Education() {
               }
             })}
           </Timline>
-          </Slide>
-        </Resume>
+        </Slide>
+      </Resume>
     </Container>
   );
 }
@@ -75,10 +75,10 @@ const Container = styled.div`
         font-size: 1.9rem;
     }
     p{
-        width: 28rem;
-        margin: 0 auto;
-        padding: 1rem 0;
-        font-size: 0.9rem;
+      width: 32rem;
+      margin: 0px auto;
+      padding: 1rem 0px;
+      font-size: 0.9rem;
         @media(max-width : 500px){
             width: 90%;
         }
@@ -97,7 +97,7 @@ const Container = styled.div`
     bottom: -11px;
     width: 119px;
   }
-`;  
+`;
 const Resume = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -118,5 +118,16 @@ const Timline = styled.div`
     margin: 14px auto;
     height: 50vh;
     }
+
+     .icon-graduation,
+ .icon-briefcase{
+    position: absolute;
+    left:-0.4375rem;
+    top: 0;
+    font-size: var(--h2--font-size);
+    color: var(--first-color);
+    padding:0.4375rem 0;
+    background-color: var(--container-color);
+}
   
 `

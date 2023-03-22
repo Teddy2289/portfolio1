@@ -111,7 +111,7 @@ display: none;
         position: fixed;
         display: flex;
         flex-direction: column;
-        background-color: #4DD0ED;
+        background-color:rgba(23, 24, 24, 0.94);
         inset: 0;
         justify-content: center;
         align-items: center;
