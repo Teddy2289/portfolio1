@@ -318,7 +318,7 @@ const Form = styled.div`
       width: 50%;
       justify-content: space-between;
       height: 30px;
-      padding:5px;
+      padding:8px;
       background-color: #4dd0ed;
       border: none;
       border-radius: 5px;

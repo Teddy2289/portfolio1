@@ -24,11 +24,13 @@ const Container = styled.div`
   max-width: 968px;
   margin: 0 auto;
   padding: 3rem 0;
-  height: 100vh;
+  height: 63vh;
   justify-content: center;
   align-items: center;
     @media(max-width: 840px){
         width: 90%;
+        margin-top: 197px;
+        height: 100vh;
     }
     h1 {
     text-align: center;

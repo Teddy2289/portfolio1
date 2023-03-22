@@ -156,7 +156,7 @@ const Profil = styled.div`
     transition: transform 400ms ease-in-out 0s;
     height: 37rem;
     @media (max-width: 790px) {
-      width: 20rem;
+      width: 27rem;
     }
     @media (max-width: 660px) {
       width: 18rem;
