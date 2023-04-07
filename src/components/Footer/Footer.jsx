@@ -184,7 +184,6 @@ export default Footer;
 const Container = styled.div`
   margin-top: 2rem;
   position: relative;
-  padding: 2rem 0;
   width: 80%;
   max-width: 1280px;
   margin: 0 auto;

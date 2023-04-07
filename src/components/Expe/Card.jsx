@@ -16,40 +16,39 @@ export default Card;
 
 const TimeLine = styled.div`
   position: relative;
-  padding-left: 3.125rem;
-  padding-bottom: 3.125rem;
-  @media (max-width: 840px) {
+  padding-left: 2.125rem;
+  padding-bottom: 0.125rem @media (max-width: 840px) {
     width: 90%;
     position: relative;
     padding-left: 3.125rem;
     padding-bottom: 0.125rem;
-}
+  }
 
-TimeLine:last-child{
+  TimeLine:last-child {
     padding-bottom: 0;
-}
+  }
 
-TimeLine::before{
-    content: '';
+  TimeLine::before {
+    content: "";
     width: 1px;
     height: 100%;
     background-color: white;
     position: absolute;
-    left: .25rem;
+    left: 0.25rem;
     top: 0;
-}
+  }
 
-
-.timeline_date{
+  .timeline_date {
     color: #8b88b1;
     font-size: 10px;
-}
+  }
 
-.timeline_title{
-font-size: 15px;
-}
+  .timeline_title {
+    font-size: 15px;
+  }
 
-.timeline_text{
+  .timeline_text {
     line-height: 1.5;
-}
+    inline-size: 426px;
+  }
 `;

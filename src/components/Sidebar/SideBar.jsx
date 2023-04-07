@@ -29,6 +29,11 @@ function SideBar() {
               </a>
             </li>
             <li className="nav_item">
+              <a href="#expe" className="nav_link">
+                <i className="icon-cursor"></i>
+              </a>
+            </li>
+            <li className="nav_item">
               <a href="#portfolio" className="nav_link">
                 <i className="icon-layers"></i>
               </a>

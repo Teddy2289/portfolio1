@@ -63,7 +63,7 @@ const Container = styled.div`
   max-width: 1050px;
   margin: 0 auto;
   padding: 3rem 0;
-  height: 68vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   @media (max-width: 840px) {
@@ -101,7 +101,7 @@ const Container = styled.div`
 const Resume = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.875rem;
+  column-gap: 0.875rem;
   @media (max-width: 840px) {
     width: 83%;
     display:block;

@@ -67,9 +67,9 @@ const Container = styled.div`
   max-width: 1050px;
   margin: 0 auto;
   padding: 3rem 0;
-  height: 49vh;
   justify-content: center;
   align-items: center;
+  height:100vh;
   @media (max-width: 840px) {
     width: 90%;
   }
@@ -105,7 +105,7 @@ const Container = styled.div`
 const Resume = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.875rem;
+  column-gap: 0.875rem;
   @media (max-width: 840px) {
     width: 83%;
     display:block;
@@ -117,6 +117,7 @@ const Timline = styled.div`
     padding: 1.875rem;
     border-radius: 15px;
     position: relative;
+    width: 519px;
     @media (max-width: 840px) {
       width: 121%;
     margin: 14px auto;

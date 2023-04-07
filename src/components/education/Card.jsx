@@ -51,6 +51,7 @@ font-size: 15px;
 
 .timeline_text{
     line-height: 1.5;
+    inline-size: 404px;
 }
 `;
 
