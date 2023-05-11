@@ -3,17 +3,17 @@ const Data = [
       id: 1,
       category: "job",
       icon: "icon-graduation",
-      year: "juilly 2021  - present",
-      title: "Developper to NumHehrit",
-      desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.",
+      year: "juillet 2021  - present",
+      title: "Développeurr chez NumHehrit",
+      desc: "Developpeur au sein de l'entreprise Numherit",
     },
     {
       id: 2,
       category: "stage",
       icon: "icon-graduation",
-      year: "Main 2020 - jully 2021",
-      title: "Stagiaire to DevteckMg",
-      desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.",
+      year: "Mai 2020 - juillet 2021",
+      title: "Stagiaire chez DevteckMg",
+      desc: "Stagiair Web chez FirtInfo , stage de pratique ",
     },
   ];
   

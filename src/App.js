@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./components/Banner/Header";
 import ProfComponent from "./components/Banner/ProfComponent";
-import Education from "./components/education/Education";
 import Expe from "./components/Expe/Expe";
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
@@ -18,7 +17,6 @@ function App() {
         <Header />
         <ProfComponent />
       </Banner>
-      <Education />
       <Service />
       <Experience />
       <Expe/>

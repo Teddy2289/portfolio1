@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillFacebook } from "react-icons/ai";
-import profif from "./../../assets/profil.png";
+import profif from "./../../assets/profil.jpg";
 import { Slide } from "react-awesome-reveal";
 
 function ProfComponent() {
+
+    const handleClick = ()=> {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
   return (
     <Container>
       <Text>
@@ -18,16 +22,13 @@ function ProfComponent() {
           <h1>Teddy Rinah</h1>
         </Slide>
         <Slide>
-          <h3>Developper</h3>
+          <h3>Developper PHP/Laravel | Reactjs/Vuejs </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            vitae porro sequi tempore natus vero, rem nostrum molestiae
-            laboriosam numquam. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Soluta vitae porro sequi tempore natus vero, rem
-            nostrum molestiae laboriosam numquam.
+              En tant que développeur web passionné de la technologie, j'ai une expertise dans les frameworks PHP/Laravel et Reactjs/Vuejs,
+              je possède également des compétences en design, ce qui me permet de créer des interfaces utilisateur attrayantes et intuitives.
           </p>
         </Slide>
-        <button>Let's talk</button>
+        <button onClick={handleClick} >Let's start</button>
         <Social>
           <p>Check out my</p>
           <div className="social-icon">
@@ -96,6 +97,7 @@ const Text = styled.div`
   }
   p {
     font-weight: 300;
+   line-height: 2;
   }
   button {
     padding: 0.7rem 2rem;
@@ -149,8 +151,8 @@ const Social = styled.div`
 
 const Profil = styled.div`
   img {
-    width: 41rem;
-    border-radius: 0px 0px 50% 50%;
+    width: 37rem;
+    border-radius: 50%;
     object-fit: cover;
     filter: drop-shadow(rgba(1, 190, 190, 0.435) 0px 10px 10px);
     transition: transform 400ms ease-in-out 0s;

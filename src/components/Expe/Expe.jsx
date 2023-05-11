@@ -13,8 +13,6 @@ function Expe() {
         <h1 className="title">
           My <span className="green">Experience</span>
         </h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto doloremque
-          voluptate excepturi porro sed totam quis animi dolorum rerum earum.</p>
       </Zoom>
       <Resume>
         <Slide direction="left">
@@ -103,6 +101,7 @@ const Container = styled.div`
   }
 `;
 const Resume = styled.div`
+margin-top:8rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 0.875rem;

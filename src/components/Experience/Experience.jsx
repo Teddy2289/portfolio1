@@ -12,10 +12,8 @@ function Experience() {
             <div className="wrapper-kils" >
             <Zoom>
             <h1>
-                My <span className="green">Skils</span>
+                Sk<span className="green">ils</span>
             </h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto doloremque 
-        voluptate excepturi porro sed totam quis animi dolorum rerum earum.</p>
             </Zoom>
             <Slide direction="left">
                 <Div>

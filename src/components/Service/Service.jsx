@@ -1,49 +1,42 @@
 import React from "react";
-import { MdDesignServices } from "react-icons/md";
-import { FiCodesandbox } from "react-icons/fi";
-import { CgWebsite } from "react-icons/cg";
+import {MdDesignServices} from "react-icons/md";
+import {FiCodesandbox} from "react-icons/fi";
+import {CgWebsite} from "react-icons/cg";
 import styled from "styled-components";
 import Card from "./Card";
-import { Slide } from "react-awesome-reveal";
-import { Zoom } from "react-awesome-reveal";
+import {Slide} from "react-awesome-reveal";
+import {Zoom} from "react-awesome-reveal";
 
 function Service() {
-  return (
-    <Container id="service">
-      <Zoom>
-        <h1 className="title">
-          My <span className="green">services</span>
-        </h1>
-        <h1>What I Do</h1>
-      </Zoom>
-      <Cards>
-        <Slide direction="left">
-          <Card
-            Icon={MdDesignServices}
-            title={"ui/ux designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
-          />
-        </Slide>
-        <Slide direction="up">
-          <Card
-            Icon={FiCodesandbox}
-            title={"graphic designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
-          />
-        </Slide>
-        <Slide direction="right">
-          <Card
-            Icon={CgWebsite}
-            title={"web designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
-          />
-        </Slide>
-      </Cards>
-    </Container>
-  );
+    return (
+        <Container id="service">
+            <Zoom>
+                <h1 className="title">
+                    What <span className="green"> I Do</span>
+                </h1>
+            </Zoom>
+            <Cards>
+                <Slide direction="left">
+                    <Card
+                        Icon={MdDesignServices}
+                        title={"UI/UX"}
+                    />
+                </Slide>
+                <Slide direction="up">
+                    <Card
+                        Icon={FiCodesandbox}
+                        title={"PROGRAMMING"}
+                    />
+                </Slide>
+                <Slide direction="right">
+                    <Card
+                        Icon={CgWebsite}
+                        title={"WEB DESIGN"}
+                    />
+                </Slide>
+            </Cards>
+        </Container>
+    );
 }
 
 export default Service;
@@ -82,6 +75,7 @@ const Container = styled.div`
   }
 `;
 const Cards = styled.div`
+ margin-top: 8rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-top: 4rem;

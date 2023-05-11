@@ -14,11 +14,6 @@ function SideBar() {
               </a>
             </li>
             <li className="nav_item">
-              <a href="#education" className="nav_link">
-                <i className="icon-briefcase"></i>
-              </a>
-            </li>
-            <li className="nav_item">
               <a href="#service" className="nav_link">
                 <i className="icon-globe"></i>
               </a>
