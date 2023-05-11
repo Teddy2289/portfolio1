@@ -22,10 +22,10 @@ function ProfComponent() {
           <h1>Teddy Rinah</h1>
         </Slide>
         <Slide>
-          <h3>Developper PHP/Laravel | Reactjs/Vuejs </h3>
+          <h3>PHP/Laravel  | Reactjs/Vuejs Developer </h3>
           <p>
-              En tant que développeur web passionné de la technologie, j'ai une expertise dans les frameworks PHP/Laravel et Reactjs/Vuejs,
-              je possède également des compétences en design, ce qui me permet de créer des interfaces utilisateur attrayantes et intuitives.
+
+            As a tech-savvy web developer, I have expertise in PHP/Laravel and Reactjs/Vuejs frameworks, I also have design skills, which allows me to create attractive and intuitive user interfaces.
           </p>
         </Slide>
         <button onClick={handleClick} >Let's start</button>
